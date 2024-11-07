@@ -1,22 +1,76 @@
-// problem number 1 :
+{
 
-// start 
+    // problem number 1 :
 
-function sumArray(num: number[]): number {
-    return num.reduce((accumulator, num) => accumulator + num, 0)
+    // start 
+
+    function sumArray(num: number[]): number {
+        return num.reduce((accumulator, num) => accumulator + num, 0)
+    }
+    const sumArrayResult = sumArray([1, 2, 3, 4, 5,])
+    // console.log(sumArrayResult);
+
+    //  end 
+
+    // ------------->
+
+    // problem number 2 :
+
+    function removeDuplicates(num: number[]): number[] {
+        return Array.from(new Set(num))
+    }
+
+    const result = removeDuplicates([1, 2, 2, 3, 4, 4, 5])
+    // console.log(result);
+
+
+    // ------------>
+
+    // problem number 3 : 
+
+
+
+
+
+
+    // ---------------->
+
+    // Problem number 4 :
+
+
+    type Circle = {
+        shape: "circle";
+        radius: number;
+    };
+
+    type Rectangle = {
+        shape: "rectangle";
+        width: number;
+        height: number;
+    };
+
+    type Shape = Circle | Rectangle;
+
+    function calculateShapeArea(shape: Shape): number {
+        if (shape.shape === "circle") {
+            return Math.PI * shape.radius * shape.radius
+        } else if (shape.shape === "rectangle") {
+            return shape.height * shape.width
+        }
+        return 0
+    }
+
+    const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
+    // console.log(circleArea);
+
+    const rectangleArea = calculateShapeArea({ shape: "rectangle", width: 4, height: 6 });
+    // console.log(rectangleArea);
+
+
+
+
+
+
+
+
 }
-const sumArrayResult = sumArray([1, 2, 3, 4, 5,])
-// console.log(sumArrayResult);
-
-//  end 
-
-// ------------->
-
-// problem number 2 :
-
-function removeDuplicates(num: number[]): number[] {
-    return Array.from(new Set(num))
-}
-
-const result = removeDuplicates([1, 2, 2, 3, 4, 4, 5])
-console.log(result);

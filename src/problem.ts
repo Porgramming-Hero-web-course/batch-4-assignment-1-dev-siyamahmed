@@ -83,7 +83,54 @@
 
     // ---------->
 
-   
+
+    // Problem number 6 : 
+
+    interface Profile {
+        name: string;
+        age: number;
+        email: string;
+    }
+
+    function updateProfile(profile: Profile, updateProfile: Partial<Profile>): Profile {
+        const updatedProfile = { ...profile, ...updateProfile };
+        return updatedProfile;
+    }
+
+    const myProfile: Profile = {
+        name: "siyam ahmed",
+        age: 21,
+        email: "dev.siyamahmed@gmail.com"
+    }
+
+    const updateInfo = updateProfile(myProfile, { age: 19 });
+    console.log(updateInfo);
+
+
+
+    // ------------->
+
+    // Problem number 7 :
+
+    class Car {
+        make: string;
+        model: string;
+        year: number
+
+        constructor(make: string, model: string, year: number) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        getCarAge(currentYear: number): number {
+            return currentYear - this.year
+        }
+    }
+
+    const car = new Car("Toyota", "TY79", 2018)
+    console.log(car.getCarAge(2024));
+
 
 
 

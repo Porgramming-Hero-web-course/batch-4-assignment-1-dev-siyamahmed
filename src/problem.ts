@@ -28,8 +28,20 @@
 
     // problem number 3 : 
 
+    function countWordOccurrences(sentence: string, word: string): number {
 
+        const lowerCaseSentence = sentence.toLowerCase();
+        const lowerCaseWord = word.toLowerCase();
+        const wordsArray = lowerCaseSentence.split(/\W+/);
+        // console.log(wordsArray);
 
+        const count = wordsArray.filter((w) => w === lowerCaseWord).length;
+
+        return count;
+
+    }
+
+    console.log(countWordOccurrences("I love typescript", "typescript"));
 
 
 
@@ -71,18 +83,16 @@
 
     // Problem number 5 :
 
-
     function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
         return obj[key]
     }
     const person = { name: "Alice", age: 30 };
     const userInfo = getProperty(person, "name");
-    console.log(userInfo);
+    // console.log(userInfo);
 
 
 
     // ---------->
-
 
     // Problem number 6 : 
 
@@ -104,7 +114,7 @@
     }
 
     const updateInfo = updateProfile(myProfile, { age: 19 });
-    console.log(updateInfo);
+    // console.log(updateInfo);
 
 
 
@@ -129,7 +139,7 @@
     }
 
     const car = new Car("Toyota", "TY79", 2018)
-    console.log(car.getCarAge(2024));
+    // console.log(car.getCarAge(2024));
 
     // ---------->
 
@@ -144,7 +154,7 @@
         return true
     }
     const personInfo = { name: "Alice", age: 25, email: "alice@example.com" };
-    console.log(validateKeys(personInfo, ["name", "age"]));
+    // console.log(validateKeys(personInfo, ["name", "age"]));
 
 
 
